@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-bg: #d3d3d3;
+  --secondary-bg: #74819d;
+  --brand-color-primary: #cb941a;
+  --wine: #8C1C13;
+  --wine-light: #A4292E;
+  --wine-dark: #5E0B10;
+  --gold: #C9A66B;
+  --gold-light: #D9BF89;
+  --gold-dark: #B38D4D;
+  --vineyard: #4D724D;
+  --vineyard-light: #6B8E6B;
+  --vineyard-dark: #2F552F;
+  --cream: #F8F4E3;
+  --white: #fff;
+
+}
+
+/* Wine light  */
+
+body {
+  background: var(--white);
+}
+
+/* Navbar  */
+
+a {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+.header {
+  background: var(--secondary-bg);
+  padding-inline: 1rem;
+}
+
+.nav {
+  max-width: 1280px;
+  height: 70px;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lista-navbar {
+  /* Alterado de .nav-list para .lista-navbar */
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.lista-navbar a {
+  /* Alterado de .nav-list a para .lista-navbar a */
+  font-size: 18px;
+  color: var(--wine-dark);
+  padding-block: 16px;
+}
+
+.logo {
+  padding-top: 10px;
+  height: 6.25rem;
+}
+
+.btn_navbar {
+  /* Alterado de .hamburger para .btn_navbar */
+  display: none;
+  border: none;
+  background: none;
+  border-top: 3px solid var(--wine-dark);
+  cursor: pointer;
+}
+
+.btn_navbar::after, /* Alterado de .hamburger::after para .btn_navbar::after */
+.btn_navbar::before {
+  /* Alterado de .hamburger::before para .btn_navbar::before */
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: var(--wine-dark);
+  margin-top: 5px;
+  position: relative;
+  transition: 0.3s;
+}
+
+@media (max-width: 750px) {
+  .btn_navbar {
+    /* Alterado de .hamburger para .btn_navbar */
+    display: block;
+    z-index: 1;
+  }
+
+  .lista-navbar {
+    /* Alterado de .nav-list para .lista-navbar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--secondary-bg);
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0;
+
+    pointer-events: none;
+  }
+
+  .lista-navbar a {
+    /* Alterado de .nav-list a para .lista-navbar a */
+    font-size: 24px;
+    opacity: 0;
+  }
+
+  .lista-navbar li:nth-child(1) a {
+    /* Alterado de .nav-list li para .lista-navbar li */
+    transition: 0.5s 0.2s;
+  }
+
+  .lista-navbar li:nth-child(2) a {
+    /* Alterado de .nav-list li para .lista-navbar li */
+    transition: 0.5s 0.4s;
+  }
+
+  .lista-navbar li:nth-child(3) a {
+    /* Alterado de .nav-list li para .lista-navbar li */
+    transition: 0.5s 0.6s;
+  }
+
+  /* Estilos ativos */
+
+  .nav.active .lista-navbar {
+    /* Alterado de .nav-list para .lista-navbar */
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;
+  }
+
+  .nav.active .lista-navbar a {
+    /* Alterado de .nav-list a para .lista-navbar a */
+    opacity: 1;
+  }
+
+  .nav.active .btn_navbar {
+    /* Alterado de .hamburger para .btn_navbar */
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;
+  }
+
+  .nav.active .btn_navbar::before {
+    /* Alterado de .hamburger::before para .btn_navbar::before */
+    transform: rotate(135deg);
+  }
+
+  .nav.active .btn_navbar::after {
+    /* Alterado de .hamburger::after para .btn_navbar::after */
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+
+/* Conteúdo da historia */
+
+.history {
+  background: var(--cream);
+  padding: 60px 0px 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.history h1 {
+  font-size: 2rem;
+}
+
+.linha {
+  height: 2px;           /* Define a espessura da linha */
+  background-color: var(--wine); /* Define a cor da linha */
+  margin-top: -70px; 
+  width: 300px;
+}
+
+.history_content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  
+}
+
+.history img {
+  border-radius: 20px;
+  height: 600px;
+  /* margin: 30px 60px; */
+}
+
+.history_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 750px;
+}
+
+.history_text h2 {
+  color: var(--wine-light);
+}
+
+.history_text p {
+  font-size: 20px;
+}
