@@ -5,12 +5,9 @@
 }
 
 :root {
-  --secondary-bg: #74819d;
-  --brand-color-primary: #cb941a;
-  --wine: #8c1c13;
-  --wine-light: #a4292e;
+  --wine: #3b1c1a;
   --wine-dark: #5e0b10;
-  --gold-dark: #b38d4d;
+  --gold-dark: #a58c8c;
   --cream: #f8f4e3;
   --white: #fff;
   --btn-color: #f86664;
@@ -19,8 +16,6 @@
 body {
   background: var(--white);
 }
-
-/* Navbar  */
 
 a {
   font-family: sans-serif;
@@ -56,9 +51,9 @@ a {
 }
 
 .logo {
-  color: #000;
-  font-size: 2rem;
-  font-weight: 600;
+  height: 115px; 
+  width: auto;
+  cursor: pointer;
 }
 
 .btn_navbar {
@@ -81,37 +76,54 @@ a {
   transition: 0.3s;
 }
 
-/* Conteúdo da historia */
-
 .history {
-  background: var(--cream);
-  padding: 60px 0px 60px;
+  min-height: 75vh;
+  background-image: url('/src/assets/imgbackground.jpg');
+  background-size: cover; 
+  background-position: center; 
+  padding: 60px 0px 60px; 
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 5rem;
+  color: white;
+  position: relative;
+  overflow: hidden; 
+}
+
+.history::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(12, 12, 16, 0.6); 
+  z-index: 0; 
+}
+
+.history_content {
+  position: relative; 
+  z-index: 1; 
 }
 
 h1 {
   font-size: 30px;
+  z-index: 1;
 }
 
 .linha {
   height: 2px;
-  background-color: var(--wine-dark);
+  background-color: var(--white);
   margin-top: -70px;
   width: 300px;
+  z-index: 1;
 }
 
 .history_content {
   display: flex;
   align-items: center;
   gap: 50px;
-}
-
-.history img {
-  border-radius: 20px;
-  height: 600px;
 }
 
 .history_text {
@@ -122,7 +134,7 @@ h1 {
 }
 
 .history_text h2 {
-  color: var(--wine-dark);
+  color: var(--white);
 }
 
 .history_text p {
@@ -218,7 +230,7 @@ h1 {
 }
 
 .footer {
-  margin-top: 140px;
+  margin-top: 20px;
   padding-left: 20px;
   padding-bottom: 50px;
   display: flex;
