@@ -3,4 +3,4 @@ const nav = document.querySelector(".nav")
 
 btn_navbar.addEventListener("click", () => 
   nav.classList.toggle("active")
-) 
+)

@@ -8,43 +8,120 @@
     <title>Vinharia Agnello</title>
   </head>
   <body>
-    
     <header class="header">
       <nav class="nav">
-        <a href="#"><img class= "logo" src = "./src/assets/Logo.png" alt=""></a>
+        <a href="#"
+          ><img
+            class="logo"
+            src="./src/assets/Logo.png"
+            alt="Logo da empresa Agnello"
+        /></a>
         <button class="btn_navbar"></button>
         <ul class="lista-navbar">
-          <li><a href="#">Vinhos</a></li>
-          <li><a href="#">Avaliações</a></li>
-          <li><a href=" ">Sobre nós</a></li>
+          <li><a href="#sobreNos">Sobre nós</a></li>
+          <li><a href="#catalogo">Vinhos</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="history">
-        
+      <section id="sobreNos" class="history">
         <h1>Nossa Historia</h1>
         <div class="linha"></div>
 
         <div class="history_content">
-          <img src="./src/assets/Vinicola.png" alt="Foto da vinícola da família Agnenello">
-        
+          <img
+            id="foto_vinicola"
+            src="./src/assets/Vinicola.png"
+            alt="Foto da vinícola da família Agnenello"
+          />
 
           <div class="history_text">
             <h2>Um legado de excelência</h2>
-            <p>Por mais de um século, a família Agnello cultiva vinhedos no coraçãoda região vinícola, transmitindo tradições e expertise por cincogerações de apaixonados produtores de vinho. 
-            Nosso compromisso com práticas de cultivo sustentáveis e aatençãometiculosa aos detalhes renderam à Agnello Wines o reconhecimentocomoum dos principais produtores de vinho da região.</p>
+            <p>
+              Por mais de um século, a família Agnello cultiva vinhedos no
+              coraçãoda região vinícola, transmitindo tradições e expertise por
+              cincogerações de apaixonados produtores de vinho. Nosso
+              compromisso com práticas de cultivo sustentáveis e
+              aatençãometiculosa aos detalhes renderam à Agnello Wines o
+              reconhecimentocomoum dos principais produtores de vinho da região.
+            </p>
+
+            <div class="premios">
+              <div class="premio imagem_premios premios_paragrafo">
+                <img
+                  class="grape"
+                  src="./src/assets/icon_grape.png"
+                  alt="icone de uma uva"
+                />
+                <h3>Melhores uvas</h3>
+                <p>
+                  Variedades cuidadosamente selecionadas cultivadas em condições
+                  ótimas.
+                </p>
+              </div>
+              <div class="premio imagem_premios premios_paragrafo">
+                <img
+                  class="medalha"
+                  src="./src/assets/icon_medalha.png"
+                  alt="icone de uma medalha."
+                />
+                <h3>Premios</h3>
+                <p>
+                  Reconhecido internacionalmente pela qualidade excepcional.
+                </p>
+              </div>
+              <div class="premio imagem_premios premios_paragrafo">
+                <img
+                  src="./src/assets/icon_folha.png"
+                  alt="Icone de uma icon_folha"
+                  class="folha"
+                />
+                <h3>Sustentabilidade</h3>
+                <p>Práticas ecologicamente corretas do vinhedo à garrafa.</p>
+              </div>
+            </div>
           </div>
         </div>
-
       </section>
 
+      <section id="catalogo" class="catalogo">
+        <h1>Nossas Melhores Seleções</h1>
+        <div class="linha gap_linha"></div>
 
+        <div class="produtos">
+          <div class="produto produto_imagem">
+            <img
+              src="./src/assets/vinho_branco.jpg"
+              alt="Foto de uma garrafa de vinho."
+            />
+            <h2>Reserve Cabernet Sauvignon</h2>
+            <p>2020 Vintage</p>
+            <p>
+              Encorpado e robusto com notas de amora, cedro e chocolate.
+            </p>
+          </div>
+
+          <div class="produto produto_imagem">
+            <img src="./src/assets/vinho_preto.jpg" alt="Foto de uma garrafa de vinho preta">
+            <h2>Signature Chardonnay</h2>
+            <p>2020 Vintage</p>
+            <p>Fresco e elegante com toques de maçã, baunilha e carvalho tostado.</p>
+          </div>
+
+          <div class="produto produto_imagem">
+            <img src="./src/assets/kit_vinho.png" alt="Foto de um kit de vinho">
+            <h2>Estate Pinot Noir</h2>
+            <p>2020 Vintage</p>
+            <p>
+              Sedoso e aromático com notas de cereja, pétala de rosa e especiarias.
+            </p>
+          </div>
+
+        </div>
+      </section>
     </main>
-      
-    <footer>
-      
-    </footer>
-    
+
+    <footer></footer>
   </body>
 </html>
