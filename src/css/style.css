@@ -99,8 +99,8 @@ a {
   gap: 5rem;
 }
 
-.history h1 {
-  font-size: 2rem;
+h1 {
+  font-size: 30px;
 }
 
 .linha {
@@ -186,18 +186,73 @@ a {
   flex-direction: column;
   gap: 5px;
   border: 1px solid #000;
-  height: 400px;
+  height: 420px;
   border-radius: 10px;
   width: 300px;
 }
 
 .produto h2 {
   padding-left: 2px;
+  font-size: 16px;
 }
 
 .produto p {
   padding-left: 2px;
+  font-size: 16px;
 }
+
+.preco {
+  display: flex;
+  align-items: center;
+  color: var(--gold-dark);
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: 140px;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  display: flex;
+  background: var(--wine);
+  justify-content: space-around;
+}
+
+.footer h3 {
+  padding-top: 50px;
+  color: var(--gold-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer ul {
+  width: 25%;
+  list-style: none;
+}
+
+.footer li {
+  color: var(--white);
+  margin: 10px 0px;
+}
+
+.footer p {
+  margin-bottom: 30px;
+  color: var(--white);
+}
+
+.redes_sociais {
+  display: flex;
+  gap: 20px;
+}
+
+.rede_sociais img {
+  cursor: pointer;
+}
+
+.novidades {
+  padding-right: 20px;
+}
+
+
 @media (max-width: 1250px) {
   .btn_navbar {
     display: block;
@@ -274,6 +329,12 @@ a {
 
   .produtos {
     gap: 90px;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
